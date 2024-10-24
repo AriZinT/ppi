@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuarios</title>
+</head>
+<body>
+    <h6><a href="bienvenida_db.html">Volver a Inicio</a></h6>
+    <h1>Bienvenidos a Intsagram</h1>
+    <p>Ingrese sus datos personales para el registro</p>
+    <!-- PHP va a ser el intermediario entre la base y la pagina -->
+    <form action="confirmacion_bd.php" method="post">
+        Nombre: <input type="text" name="nombre"> <br>
+        Apellido: <input type="text" name="apellido"><br>
+        Edad: <input type="text" name="edad"><br>
+        <input type="submit" value="Completar registro">
+    </form>
+
+</body>
+</html>

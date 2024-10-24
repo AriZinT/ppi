@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuarios</title>
+    <link rel="stylesheet" href="p8_estilo.css">
+    <style>
+        a{
+            text-decoration: none;
+            color: rgb(32, 29, 48);
+        }
+    </style>
+</head>
+<body>
+    <button><a href="bienvenida_autos.html">Inicio</a></button> <br><br>
+    <h2>Registro de Usuarios</h2>
+    <p class="linea"></p>
+    <p class="texto">Ingrese los datos del usuario:</p>
+    <!-- PHP va a ser el intermediario entre la base y la pagina -->
+    <form action="confirmacion_usuarios.php" method="post">
+        Nombre: <input type="text" name="nombre"> <br><br>
+        <input type="submit" value="Completar registro">
+    </form>
+
+</body>
+</html>
