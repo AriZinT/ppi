@@ -97,5 +97,186 @@
             <div class="col-5 p-3 bg-primary text-white">.col</div>
         </div>
     </div>
+    <div class="container">
+        <h1>Texto en BS5</h1>
+        <p>Elementos de texto. Existe una etiqueta especial para <code>código</code>.</p>
+        <p>Lorem ipsum, <mark>dolor sit amet consectetur adipisicing elit.</mark> Commodi debitis quae, voluptate cum veritatis officiis qui, iste similique aspernatur velit veniam eum consequuntur a dolore ipsum, error odio unde tempora!</p>
+        <blockquote>
+            <p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.</p>
+            <footer class="blockquote-footer">From WWF's website</footer>
+        </blockquote>
+        <p>Utilizar la combinación <kbd>Ctrl + Shift + P</kbd>  para abrir la paleta de comandos de VSCode</p>
+        <p>
+            <pre>
+            Hola
+                mundo
+                cruel
+                extra
+                cruel
+            </pre>
+        </p>
+        <p>Ejemplo de código en C: 
+            <pre>
+                #include &lt;stdio.h>
+                void main(){
+                    printf("Hola mundo");
+                }
+            </pre>
+        </p>
+    </div>
+    <div class="container mt-3">
+        <h2>Contextual Colors</h2>
+        <p>Use the contextual classes to provide "meaning through colors":</p>
+        <p class="text-muted">This text is muted.</p>
+        <p class="text-primary">This text is important.</p>
+        <p class="text-success">This text indicates success.</p>
+        <p class="text-info">This text represents some information.</p>
+        <p class="text-warning">This text represents a warning.</p>
+        <p class="text-danger">This text represents danger.</p>
+        <p class="text-secondary">Secondary text.</p>
+        <p class="text-dark">This text is dark grey.</p>
+        <p class="text-body">Default body color (often black).</p>
+        <p class="text-light">This text is light grey (on white background).</p>
+        <p class="text-white">This text is white (on white background).</p>
+      </div>
+      <div class="container">
+        <h1>Tablas en BS5</h1>
+        <!-- table.table>thead>tr>th*3 -->
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>Edad</th>
+                </tr>
+            </thead>
+            <!-- tbody>tr*3>td*3 -->
+            <tbody>
+                <tr>
+                    <td>Juan</td>
+                    <td>juan@correo.com</td>
+                    <td>23</td>
+                </tr>
+                <tr>
+                    <td>Maria</td>
+                    <td>maria@correo.com</td>
+                    <td>32</td>
+                </tr>
+                <tr>
+                    <td>Fernando</td>
+                    <td>fernando@correo.com</td>
+                    <td>28</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Tablas con bordes</h1>
+        <!-- table.table>thead>tr>th*3 -->
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>Edad</th>
+                </tr>
+            </thead>
+            <!-- tbody>tr*3>td*3 -->
+            <tbody>
+                <tr>
+                    <td>Juan</td>
+                    <td>juan@correo.com</td>
+                    <td>23</td>
+                </tr>
+                <tr>
+                    <td>Maria</td>
+                    <td>maria@correo.com</td>
+                    <td>32</td>
+                </tr>
+                <tr>
+                    <td>Fernando</td>
+                    <td>fernando@correo.com</td>
+                    <td>28</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Tablas con hover</h1>
+        <!-- table.table>thead>tr>th*3 -->
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>Edad</th>
+                </tr>
+            </thead>
+            <!-- tbody>tr*3>td*3 -->
+            <tbody>
+                <tr>
+                    <td>Juan</td>
+                    <td>juan@correo.com</td>
+                    <td>23</td>
+                </tr>
+                <tr>
+                    <td>Maria</td>
+                    <td>maria@correo.com</td>
+                    <td>32</td>
+                </tr>
+                <tr>
+                    <td>Fernando</td>
+                    <td>fernando@correo.com</td>
+                    <td>28</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Tablas con colores alternados</h1>
+        <!-- table.table>thead>tr>th*3 -->
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>Edad</th>
+                </tr>
+            </thead>
+            <!-- tbody>tr*3>td*3 -->
+            <tbody>
+                <tr>
+                    <td>Juan</td>
+                    <td>juan@correo.com</td>
+                    <td>23</td>
+                </tr>
+                <tr>
+                    <td>Maria</td>
+                    <td>maria@correo.com</td>
+                    <td>32</td>
+                </tr>
+                <tr>
+                    <td>Fernando</td>
+                    <td>fernando@correo.com</td>
+                    <td>28</td>
+                </tr>
+            </tbody>
+        </table>
+      </div>
+      <div class="container">
+            <h1>Formulario Apilado</h1>
+            <h2>Stacked Form</h2>
+            <form action="">
+                <div class="mb-3 mt-3">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                </div>
+                <div class="mb-3">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+                </div>
+                <div class="form-check mb-3">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" name="remember"> Remember me
+                </label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            </div>
+      </div>
 </body>
 </html>
