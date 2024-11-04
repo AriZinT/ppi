@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuarios</title>
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> 
+</head>
+<body>
+    <div class="container p-5 my-5 bg-primary text-white">
+        <h1>Sistema de control de ventas de autos</h1>
+        <div class="btn-group">
+                <button type="button" class="btn btn-light"><a href="bienvenida_autos_bs.html">Regresar al Inicio</a></button> <br><br>
+                <button type="button" class="btn btn-light"><a href="consulta_usuarios_bs.php">Consultar Usuarios</a></button><!--Enlace disfrazado de botón-->
+                <button type="button" class="btn btn-light"><a href="consulta_compras_bs.php">Consultar compras</a></button>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Registro de Usuarios</h2>
+        <p></p>
+        <p>Ingrese los datos del usuario:</p>
+    </div>
+    <!-- PHP va a ser el intermediario entre la base y la pagina -->
+    <div class="container">
+        <form action="confirmacion_usuarios_bs.php" method="post">
+            <div class="mb-3 mt-3">
+                <label for="name">Nombre:</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Ingrese nombre" name="nombre">
+                </div>
+                <input type="submit" class="btn btn-primary" value="Completar registro"> 
+        </form>
+    </div>
+ 
+</body>
+</html>
