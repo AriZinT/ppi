@@ -1,3 +1,15 @@
+<?php
+    include("conexion.php");
+
+    $query = "SELECT * FROM usuarios;";
+    if (mysqli_connect_errno()) {
+        echo "<div class=\"alert alert-danger\"><strong>Error!</strong>" . mysqli_connect_error() . "</div>";
+    }
+    $result = mysqli_query($con, $query);
+    mysqli_close($con);
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +24,7 @@
 </head>
 <body>
     <!-- Contenedor principal de BS5 -->
-     <div class="container">
+     <div class="container-fluid">
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
             <div class="container-fluid">
               <ul class="navbar-nav">
@@ -25,10 +37,10 @@
                   <a class="nav-link" href="index.html">Inicio</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" href="registro.html">Registro</a>
+                  <a class="nav-link" href="registro.html">Registro</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="consulta.php">Consulta</a>
+                  <a class="nav-link active" href="consulta.php">Consulta</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="about.html">Acerca de</a>
@@ -36,22 +48,28 @@
               </ul>
             </div>
           </nav>
-          <h2 class="my-5">Registro</h2>
-          <form action="confirmacion.php" method="post">
-            <div class="mb-3 mt-3">
-                <label for="nombre" class="form-label">Nombre:</label>
-                <input type="text" class="form-control" id="n"ombre placeholder="Ingrese nombre" name="nombre">
-              </div>
-            <div class="mb-3 mt-3">
-              <label for="correo" class="form-label">Correo:</label>
-              <input type="email" class="form-control" id="correo" placeholder="Ingrese correo" name="correo">
-            </div>
-            <div class="mb-3">
-              <label for="edad" class="form-label">Edad:</label>
-              <input type="number" class="form-control" id="edad" placeholder="Ingrese edad" name="edad">
-            </div>
-            <button type="submit" class="btn btn-primary">Registrar</button>
-          </form> 
+        <!-- table.table.striped>thead>tr>th*3 -->
+         <h2 class="my-5">Usuarios Registrados</h2>
+        <table class="table striped">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>Edad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                    while($row = mysqli_fetch_array($result)) {
+                        echo "<tr>";
+                        echo "<td>" . $row['nombre'] . "</td>";
+                        echo "<td>" . $row['correo'] . "</td>";
+                        echo "<td>" . $row['edad'] . "</td>";
+                        echo "</tr>";
+                    }
+                ?>
+            </tbody>
+        </table>
     </div>
 </body>
 </html>
